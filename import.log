@@ -1,0 +1,15 @@
+2014-10-27 17:08:48 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:26)] - jdbc:sqlite:/D:/work/IDE_work/bigfilein/target/classes/oatos_import.db
+ 2014-10-27 17:34:22 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:27)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-28 10:44:01 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-28 16:18:59 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-28 16:19:36 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-28 17:00:17 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-28 17:01:21 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-28 17:52:54 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-28 17:56:47 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-28 17:58:32 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-28 17:58:52 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-28 18:13:43 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-28 18:14:06 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-28 18:14:23 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 
