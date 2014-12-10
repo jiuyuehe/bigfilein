@@ -23,8 +23,16 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="bigfilein" />
+        <module name="dto" />
+        <module name="services00" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dto" target="1.6" />
+      <module name="oatos-client" target="1.8" />
+      <module name="oatos-login" target="1.8" />
+      <module name="oatos-main" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

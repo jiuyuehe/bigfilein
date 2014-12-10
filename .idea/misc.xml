@@ -8,11 +8,24 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../services00/pom.xml" />
+        <option value="D:/svn/clinet/trunk-transfer/pom.xml" />
+        <option value="D:/svn/dto/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="D:/svn/clinet/trunk-transfer/oatos-login/pom.xml" />
+        <option value="D:/svn/clinet/trunk-transfer/oatos-main/pom.xml" />
+        <option value="D:/svn/clinet/trunk-transfer/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
   </component>
 </project>
 

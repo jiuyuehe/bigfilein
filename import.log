@@ -12,4 +12,155 @@
  2014-10-28 18:13:43 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
  2014-10-28 18:14:06 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
  2014-10-28 18:14:23 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-30 11:49:31 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-30 11:50:08 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-30 13:47:16 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-30 13:48:58 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-10-30 13:49:06 [INFO][com.qycloud.oatos.bigfilein.utils.SQLiteDB.<clinit>(SQLiteDB.java:24)] - jdbc:sqlite:D:\work/oatos_import.db
+ 2014-12-09 13:45:45 [DEBUG][com.qycloud.oatos.bigfilein.utils.Proxy.post(Proxy.java:53)] - http://192.168.1.55/os/java/http://192.168.1.32/pub/user/signin: param={"nonce":"eit3teswf3qb9kvwrm6b2khjskoo0zrbpn0wtz6h0sffhikk1ea5akzwu8rw2ql0hvt5mr97i20tijgs","hashKey":"8847932864b720dc4ba125dbcb3622c1dc541b0ec5a4e42f00c73c55641811bb","userName":"18123936031","password":"88093fad736f","clientId":"2125b77a-7a48-4db3-b133-9f21e2739617","mode":"Quick"}, return=<html><head><title>Apache Tomcat/7.0.40 - Error report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 404 - </h1><HR size="1" noshade="noshade"><p><b>type</b> Status report</p><p><b>message</b> <u></u></p><p><b>description</b> <u>The requested resource is not available.</u></p><HR size="1" noshade="noshade"><h3>Apache Tomcat/7.0.40</h3></body></html>
+ 2014-12-09 13:45:45 [ERROR][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:41)] - sigin
+ org.codehaus.jackson.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: java.io.StringReader@1198b989; line: 1, column: 2]
+	at org.codehaus.jackson.JsonParser._constructError(JsonParser.java:1433)
+	at org.codehaus.jackson.impl.JsonParserMinimalBase._reportError(JsonParserMinimalBase.java:521)
+	at org.codehaus.jackson.impl.JsonParserMinimalBase._reportUnexpectedChar(JsonParserMinimalBase.java:442)
+	at org.codehaus.jackson.impl.ReaderBasedParser._handleUnexpectedValue(ReaderBasedParser.java:1198)
+	at org.codehaus.jackson.impl.ReaderBasedParser.nextToken(ReaderBasedParser.java:485)
+	at org.codehaus.jackson.map.ObjectMapper._initForReading(ObjectMapper.java:2770)
+	at org.codehaus.jackson.map.ObjectMapper._readMapAndClose(ObjectMapper.java:2718)
+	at org.codehaus.jackson.map.ObjectMapper.readValue(ObjectMapper.java:1863)
+	at com.qycloud.oatos.bigfilein.utils.Json.parse(Json.java:38)
+	at com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:36)
+	at ServiceTest.testLogin(ServiceTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:73)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:46)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+2014-12-09 14:21:48 [ERROR][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:45)] - sigin
+ org.codehaus.jackson.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: java.io.StringReader@11dc3715; line: 1, column: 2]
+	at org.codehaus.jackson.JsonParser._constructError(JsonParser.java:1433)
+	at org.codehaus.jackson.impl.JsonParserMinimalBase._reportError(JsonParserMinimalBase.java:521)
+	at org.codehaus.jackson.impl.JsonParserMinimalBase._reportUnexpectedChar(JsonParserMinimalBase.java:442)
+	at org.codehaus.jackson.impl.ReaderBasedParser._handleUnexpectedValue(ReaderBasedParser.java:1198)
+	at org.codehaus.jackson.impl.ReaderBasedParser.nextToken(ReaderBasedParser.java:485)
+	at org.codehaus.jackson.map.ObjectMapper._initForReading(ObjectMapper.java:2770)
+	at org.codehaus.jackson.map.ObjectMapper._readMapAndClose(ObjectMapper.java:2718)
+	at org.codehaus.jackson.map.ObjectMapper.readValue(ObjectMapper.java:1863)
+	at com.qycloud.oatos.bigfilein.utils.Json.parse(Json.java:38)
+	at com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:39)
+	at ServiceTest.testLogin(ServiceTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:73)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:46)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+2014-12-09 14:31:37 [ERROR][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:45)] - sigin
+ org.codehaus.jackson.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: java.io.StringReader@14fa86ae; line: 1, column: 2]
+	at org.codehaus.jackson.JsonParser._constructError(JsonParser.java:1433)
+	at org.codehaus.jackson.impl.JsonParserMinimalBase._reportError(JsonParserMinimalBase.java:521)
+	at org.codehaus.jackson.impl.JsonParserMinimalBase._reportUnexpectedChar(JsonParserMinimalBase.java:442)
+	at org.codehaus.jackson.impl.ReaderBasedParser._handleUnexpectedValue(ReaderBasedParser.java:1198)
+	at org.codehaus.jackson.impl.ReaderBasedParser.nextToken(ReaderBasedParser.java:485)
+	at org.codehaus.jackson.map.ObjectMapper._initForReading(ObjectMapper.java:2770)
+	at org.codehaus.jackson.map.ObjectMapper._readMapAndClose(ObjectMapper.java:2718)
+	at org.codehaus.jackson.map.ObjectMapper.readValue(ObjectMapper.java:1863)
+	at com.qycloud.oatos.bigfilein.utils.Json.parse(Json.java:38)
+	at com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:39)
+	at ServiceTest.testLogin(ServiceTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:73)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:46)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
+2014-12-09 14:57:04 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:26)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-09 14:58:16 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:26)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-09 14:58:17 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:45)] - login ... success : 4cde6dd2a4100000d9faa7fecee5fa47124912a93d35ded81b97d0ac9cb8yb17315f1d491691f51300000000
+ 2014-12-09 15:59:08 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:33)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-09 15:59:08 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:52)] - login ... success : 107ae0e2a41000001093b1ee27ad6c76f4850dae10886e6272dfc52b97rloayt315f1d491691f51300000000
+ 2014-12-09 15:59:08 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.getUserInfo(LoginService.java:71)] - {"statusCode":"OK","userId":828317001,"entId":828316001,"userName":"18123936031","realName":"阿云","userType":2,"jobTitle":"企业管理员","mail":"xiaomin@qycloud.com","mobile":"18123936031","diskEnabled":true,"diskSize":104857600,"personalLinkEnabled":false,"userStatus":"ACT","locked":false,"joinTime":1416966191000,"lastLoginTime":1418111919000,"contactDisplay":0,"diskUsed":0,"onlineStatus":"online","usualContact":false,"blocked":false,"mailAuthed":false,"mobileAuthed":true,"userFrom":"NORMAL"}
+ 2014-12-09 16:53:12 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:30)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-09 16:53:12 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:49)] - login ... success : f56204e2a4100000e118d88136be0c640824ce2ff86851bbdd800f7c68adyyzj315f1d491691f51300000000
+ 2014-12-09 16:53:12 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.getUserInfo(LoginService.java:66)] - userInfo ... load success ... : {"statusCode":"OK","userId":828317001,"entId":828316001,"userName":"18123936031","realName":"阿云","userType":2,"jobTitle":"企业管理员","mail":"xiaomin@qycloud.com","mobile":"18123936031","diskEnabled":true,"diskSize":104857600,"personalLinkEnabled":false,"userStatus":"ACT","locked":false,"joinTime":1416966191000,"lastLoginTime":1418115163000,"contactDisplay":0,"diskUsed":0,"onlineStatus":"online","usualContact":false,"blocked":false,"mailAuthed":false,"mobileAuthed":true,"userFrom":"NORMAL"}
+ 2014-12-09 16:53:12 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.getFiles(LoginService.java:88)] - getFiles ... load .. {"fileType":"sharedisk","folderId":null,"skipResults":0,"maxResults":200}
+ 2014-12-09 16:53:12 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.getFiles(LoginService.java:95)] - getFiles ... load success ... : {"statusCode":"OK","files":[{"statusCode":"OK","fileType":"sharedisk","fileId":828323001,"entId":828316001,"userId":828317001,"fileName":"Share","fileSize":0,"path":"/Share","version":1,"folder":true,"sysFolder":true,"createrName":"阿云","createTime":1416966191000,"upadteUserName":"阿云","updateTime":1416966191000,"favorite":false,"remind":true,"permissionDTO":{"statusCode":"OK","read":true,"write":true,"delete":true,"upload":true,"download":true,"share":true,"local":true,"manage":true},"labels":[]},{"statusCode":"OK","fileType":"sharedisk","fileId":828330001,"entId":828316001,"userId":828317001,"fileName":"123456","fileSize":0,"path":"/123456","version":2,"folder":true,"sysFolder":false,"createrName":"阿云","createTime":1416966253000,"upadteUserName":"阿云","updateTime":1416966253000,"favorite":false,"remind":false,"permissionDTO":{"statusCode":"OK","read":true,"write":true,"delete":true,"upload":true,"download":true,"share":true,"local":true,"manage":true},"labels":[]},{"statusCode":"OK","fileType":"sharedisk","fileId":828386001,"entId":828316001,"userId":828317001,"fileName":"555","fileSize":0,"path":"/555","version":3,"folder":true,"sysFolder":false,"createrName":"阿云","createTime":1416967255000,"upadteUserName":"阿云","updateTime":1416967255000,"favorite":false,"remind":false,"permissionDTO":{"statusCode":"OK","read":true,"write":true,"delete":true,"upload":true,"download":true,"share":true,"local":true,"manage":true},"labels":[]}],"resultCount":3}
+ 2014-12-10 18:32:36 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:40)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-10 18:32:38 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:56)] - login ... success : 3b881c33a41000000ca9f9046a855389aa8786eb62056dcd4217e63326etvfc5315f1d491691f51300000000
+ 2014-12-10 18:33:50 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:40)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-10 18:33:51 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:56)] - login ... success : 1e6a2c33a4100000a17eda06f9e85c7b4d6f004ea79ee467417aa8a08bln4uct315f1d491691f51300000000
+ 2014-12-10 18:35:32 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:40)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-10 18:35:33 [ERROR][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:51)] - login ...  error : errorRequestData
+ 2014-12-10 18:35:41 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:40)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-10 18:35:41 [ERROR][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:51)] - login ...  error : errorRequestData
+ 2014-12-10 18:35:51 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:40)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-10 18:35:51 [ERROR][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:51)] - login ...  error : errorRequestData
+ 2014-12-10 18:36:01 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:40)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-10 18:36:01 [ERROR][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:51)] - login ...  error : errorRequestData
+ 2014-12-10 18:36:07 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:40)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-10 18:36:07 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:56)] - login ... success : 37bb4c33a4100000b28f597adf56b245c0c6f9c3c5ab43c38476087c96r51ocs315f1d491691f51300000000
+ 2014-12-10 18:37:05 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:40)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-10 18:37:05 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:56)] - login ... success : dcd95c33a4100000b4512626b5d7eda97b01076ee4b1cf842b43524c48rcf09p315f1d491691f51300000000
  

@@ -68,9 +68,14 @@ public class SQLiteDB {
             close(connection);
         } catch (SQLException e) {
             e.printStackTrace();
+            Logs.getLogger().error(e.getMessage());
         }
         return result;
     }
+
+
+
+
 
 
 

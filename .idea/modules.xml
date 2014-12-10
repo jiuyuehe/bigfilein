@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bigfilein.iml" filepath="$PROJECT_DIR$/bigfilein.iml" />
+      <module fileurl="file://D:/svn/dto/dto.iml" filepath="D:/svn/dto/dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../services00/services00.iml" filepath="$PROJECT_DIR$/../services00/services00.iml" />
     </modules>
   </component>
 </project>
