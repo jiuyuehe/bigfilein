@@ -6,7 +6,7 @@ package com.qycloud.oatos.bigfilein.utils;
 public class Constant {
 
     public static String IP ;
-    public static String userName;
+    public static String userName ="mis xiao";
     public static String pwd;
     public static String UT ;
 

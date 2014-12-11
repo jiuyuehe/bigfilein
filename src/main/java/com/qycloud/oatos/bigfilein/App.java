@@ -1,5 +1,10 @@
 package com.qycloud.oatos.bigfilein;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.SimpleFileVisitor;
+
 /**
  * Created by jiuyuehe on 2014/10/27.
  */
@@ -19,6 +24,13 @@ public class App {
 
 
     //TODO    文件分析；
+
+
+    private void walkFileTree(String url){
+//        Path path = Paths.get(url);
+//        SimpleFileVisitor sf = new SimpleFileVisitor();
+//        Files.walkFileTree(path,)
+    }
 
 
 
