@@ -1,7 +1,7 @@
 package com.qycloud.oatos.bigfilein.view;
 
 import com.qycloud.oatos.bigfilein.service.LoginService;
-import com.qycloud.oatos.bigfilein.utils.Constant;
+import com.qycloud.oatos.bigfilein.model.Constant;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

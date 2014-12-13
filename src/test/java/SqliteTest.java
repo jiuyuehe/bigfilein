@@ -1,7 +1,6 @@
-import com.qycloud.oatos.bigfilein.model.ImportFile;
+import com.qycloud.oatos.bigfilein.model.loacldb.ImportFile;
 import com.qycloud.oatos.bigfilein.service.IDAO;
 import com.qycloud.oatos.bigfilein.service.ImportDAO;
-import com.qycloud.oatos.bigfilein.utils.SQLiteDB;
 import org.junit.Test;
 
 /**

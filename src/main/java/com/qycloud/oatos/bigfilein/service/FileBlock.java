@@ -1,7 +1,6 @@
 package com.qycloud.oatos.bigfilein.service;
 
-import com.qycloud.oatos.bigfilein.model.Param;
-import com.qycloud.oatos.bigfilein.utils.QuickMD5;
+import com.qycloud.oatos.bigfilein.model.oatos.Param;
 
 /**
  * Created by jiuyuehe on 2014/10/31.

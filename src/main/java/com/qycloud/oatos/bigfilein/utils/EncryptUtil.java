@@ -1,7 +1,7 @@
 package com.qycloud.oatos.bigfilein.utils;
 
-import com.qycloud.oatos.bigfilein.model.EncryptModel;
-import com.qycloud.oatos.bigfilein.model.NonceParam;
+import com.qycloud.oatos.bigfilein.model.oatos.EncryptModel;
+import com.qycloud.oatos.bigfilein.model.oatos.NonceParam;
 
 /**
  * 加密工具

@@ -1,17 +1,14 @@
 package com.qycloud.oatos.bigfilein.service;
 
-import com.qycloud.oatos.bigfilein.model.CheckResult;
-import com.qycloud.oatos.bigfilein.model.FileNewDTO;
-import com.qycloud.oatos.bigfilein.model.Param;
-import com.qycloud.oatos.bigfilein.model.SectionUploadCheckDTO;
+import com.qycloud.oatos.bigfilein.model.Constant;
+import com.qycloud.oatos.bigfilein.model.oatos.CheckResult;
+import com.qycloud.oatos.bigfilein.model.oatos.FileNewDTO;
+import com.qycloud.oatos.bigfilein.model.oatos.SectionUploadCheckDTO;
 import com.qycloud.oatos.bigfilein.utils.*;
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.entity.mime.content.ByteArrayBody;
-import org.apache.http.entity.mime.content.ContentBody;
-import org.apache.http.entity.mime.content.InputStreamBody;
 
 import java.io.*;
 import java.nio.charset.Charset;

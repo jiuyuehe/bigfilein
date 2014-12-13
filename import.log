@@ -163,4 +163,8 @@
  2014-12-10 18:36:07 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:56)] - login ... success : 37bb4c33a4100000b28f597adf56b245c0c6f9c3c5ab43c38476087c96r51ocs315f1d491691f51300000000
  2014-12-10 18:37:05 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:40)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
  2014-12-10 18:37:05 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:56)] - login ... success : dcd95c33a4100000b4512626b5d7eda97b01076ee4b1cf842b43524c48rcf09p315f1d491691f51300000000
+ 2014-12-13 13:37:35 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:40)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-13 13:37:36 [ERROR][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:51)] - login ...  error : errorWrongPWD
+ 2014-12-13 13:37:43 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:40)] - start ... loginUrl : http://192.168.1.32/os/java/pub/user/signin
+ 2014-12-13 13:37:43 [INFO][com.qycloud.oatos.bigfilein.service.LoginService.login(LoginService.java:56)] - login ... success : 16a96224a4100000b753175e31158d02bc28e64e932f7e761b8a2f7846glqqx7315f1d491691f51300000000
  

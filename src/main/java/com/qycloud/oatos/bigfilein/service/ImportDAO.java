@@ -1,7 +1,7 @@
 package com.qycloud.oatos.bigfilein.service;
 
-import com.qycloud.oatos.bigfilein.model.ImportFile;
-import com.qycloud.oatos.bigfilein.utils.Constant;
+import com.qycloud.oatos.bigfilein.model.loacldb.ImportFile;
+import com.qycloud.oatos.bigfilein.model.Constant;
 import com.qycloud.oatos.bigfilein.utils.Logs;
 import com.qycloud.oatos.bigfilein.utils.SQLiteDB;
 

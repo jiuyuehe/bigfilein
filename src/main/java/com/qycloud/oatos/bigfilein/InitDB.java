@@ -1,6 +1,6 @@
 package com.qycloud.oatos.bigfilein;
 
-import com.qycloud.oatos.bigfilein.utils.Constant;
+import com.qycloud.oatos.bigfilein.model.Constant;
 import com.qycloud.oatos.bigfilein.utils.SQLiteDB;
 
 /**

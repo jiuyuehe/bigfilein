@@ -1,27 +1,12 @@
-import com.qycloud.oatos.bigfilein.model.Param;
-import com.qycloud.oatos.bigfilein.model.SectionUploadCheckDTO;
-import com.qycloud.oatos.bigfilein.service.FileBlock;
 import com.qycloud.oatos.bigfilein.service.LoginService;
 import com.qycloud.oatos.bigfilein.service.UploadFileService;
 import com.qycloud.oatos.bigfilein.utils.FileUtil;
-import com.qycloud.oatos.bigfilein.utils.Json;
 import com.qycloud.oatos.bigfilein.utils.QuickMD5;
-import org.apache.http.HttpEntity;
-import org.apache.http.entity.ContentType;
-import org.apache.http.entity.mime.HttpMultipartMode;
-import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.junit.Test;
-import sun.rmi.runtime.Log;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
 /**
  * Created by jiuyuehe on 2014/11/1.

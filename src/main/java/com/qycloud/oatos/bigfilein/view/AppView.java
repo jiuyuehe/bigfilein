@@ -1,24 +1,23 @@
 package com.qycloud.oatos.bigfilein.view;
 
-import com.qycloud.oatos.bigfilein.utils.Constant;
+import com.qycloud.oatos.bigfilein.model.Constant;
 import javafx.application.Application;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.KeyEvent;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
-import org.codehaus.jackson.node.BooleanNode;
 
 import java.io.File;
 
@@ -55,19 +54,42 @@ public class AppView extends Application{
         return vBox;
     }
 
+    /**
+     * 文件分析界面
+     * @return
+     */
     private HBox fileAnalysisBox() {
         HBox fileAnalysis  = new HBox();
         fileAnalysis.setPrefSize(720,100);
         fileAnalysis.setBorder(new Border(new BorderStroke(Paint.valueOf("#844200"), BorderStrokeStyle.DASHED, new CornerRadii(22), BorderStroke.THIN)));
 
-        FlowPane flowPane = new FlowPane(Orientation.HORIZONTAL,5,5);
+        FlowPane flowPane = new FlowPane(Orientation.HORIZONTAL,50,20);
+        flowPane.setPadding(new Insets(10,10,10,10));
         flowPane.setPrefWidth(580);
         flowPane.setBorder(new Border(new BorderStroke(Paint.valueOf("#654200"), BorderStrokeStyle.DASHED, new CornerRadii(22), BorderStroke.THIN)));
 
-       Label label = new Label("正在扫描文件:");
-       final SimpleStringProperty ssp = new SimpleStringProperty("hello");
+       Label folder = new Label();
+       final SimpleStringProperty folderSS = new SimpleStringProperty("文件夹量:");
+        folder.textProperty().bind(folderSS);
 
-       label.textProperty().bind(ssp);
+        Label file = new Label();
+        final SimpleStringProperty fileSsp = new SimpleStringProperty("文件量:");
+        file.textProperty().bind(fileSsp);
+
+        Label bigfile = new Label();
+        final SimpleStringProperty bigfileSS = new SimpleStringProperty("大文件量(大于1G):");
+        bigfile.textProperty().bind(bigfileSS);
+
+        Label failed = new Label();
+        final SimpleStringProperty failedSS = new SimpleStringProperty("失败量:");
+        failed.textProperty().bind(failedSS);
+
+        Label scan = new Label();
+        final SimpleStringProperty scanSS = new SimpleStringProperty("正在扫描:");
+        scan.textProperty().bind(scanSS);
+
+        /**
+
        label.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -75,11 +97,18 @@ public class AppView extends Application{
             }
         });
 
-        flowPane.getChildren().addAll(label);
+         *
+         */
+
+        flowPane.getChildren().addAll(folder,file,bigfile,failed,scan);
 
 
+        ProgressIndicator p1 = new ProgressIndicator();
+        p1.setPrefSize(50, 50);
+        p1.setOpacity(1);
 
-        fileAnalysis.getChildren().addAll(flowPane);
+
+        fileAnalysis.getChildren().addAll(flowPane,p1);
 
 
         return fileAnalysis;

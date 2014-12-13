@@ -1,6 +1,7 @@
 package com.qycloud.oatos.bigfilein.service;
 
-import com.qycloud.oatos.bigfilein.model.*;
+import com.qycloud.oatos.bigfilein.model.Constant;
+import com.qycloud.oatos.bigfilein.model.oatos.*;
 import com.qycloud.oatos.bigfilein.utils.*;
 
 import java.util.UUID;
@@ -20,7 +21,7 @@ public class LoginService {
 
     private static String getUrl(String uriName){
 
-        return "http://"+Constant.IP+uriName;
+        return "http://"+ Constant.IP+uriName;
     }
 
     /**

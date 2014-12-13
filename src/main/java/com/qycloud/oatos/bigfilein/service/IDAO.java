@@ -1,6 +1,6 @@
 package com.qycloud.oatos.bigfilein.service;
 
-import com.qycloud.oatos.bigfilein.model.ImportFile;
+import com.qycloud.oatos.bigfilein.model.loacldb.ImportFile;
 
 import java.sql.SQLException;
 import java.util.List;
