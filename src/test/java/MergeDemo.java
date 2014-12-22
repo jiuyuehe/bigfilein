@@ -72,7 +72,8 @@ public class MergeDemo {
 
         /**
          * Parses start, step and iterations from args
-         * @param args the string array containing the arguments
+         *
+         * @param args  the string array containing the arguments
          * @param start which element to start the start argument from
          * @return the constructed range
          */
@@ -119,6 +120,7 @@ public class MergeDemo {
         /**
          * Parses the arguments and attempts to create a configuration containing the
          * parameters for creating the array sizes and parallelism sizes
+         *
          * @param args the input arguments
          * @return the configuration
          */
@@ -144,6 +146,7 @@ public class MergeDemo {
 
         /**
          * Creates an array for reporting the test result time in
+         *
          * @return an array containing {@code sizes.iterations * parallelism.iterations} elements
          */
         private long[][] createTimesArray() {
@@ -166,6 +169,7 @@ public class MergeDemo {
 
     /**
      * Generates an array of {@code elements} random elements
+     *
      * @param elements the number of elements requested in the array
      * @return an array of {@code elements} random elements
      */
@@ -179,6 +183,7 @@ public class MergeDemo {
 
     /**
      * Runs the test
+     *
      * @param config contains the settings for the test
      */
     private void run(Configuration config) {
@@ -200,9 +205,10 @@ public class MergeDemo {
 
     /**
      * Prints the results as a table
-     * @param sizes the different sizes of the arrays
+     *
+     * @param sizes       the different sizes of the arrays
      * @param parallelism the different parallelism levels used
-     * @param times the median times for the different sizes / parallelism
+     * @param times       the median times for the different sizes / parallelism
      */
     private void printResults(Range sizes, Range parallelism, long[][] times) {
         System.out.println("Time in milliseconds. Y-axis: number of elements. X-axis parallelism used.");
@@ -236,8 +242,9 @@ public class MergeDemo {
 
     /**
      * Runs <i>iterations</i> number of test sorts of a random array of <i>element</i> length
-     * @param iterations number of iterations
-     * @param elements number of elements in the random array
+     *
+     * @param iterations  number of iterations
+     * @param elements    number of elements in the random array
      * @param parallelism parallelism for the ForkJoin framework
      * @return the median time of runs
      */
@@ -259,6 +266,7 @@ public class MergeDemo {
 
     /**
      * Calculates the median value of the array
+     *
      * @param times array of times
      * @return the median value
      */

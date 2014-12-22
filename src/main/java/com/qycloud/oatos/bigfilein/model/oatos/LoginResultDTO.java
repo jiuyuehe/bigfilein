@@ -5,52 +5,52 @@ import com.qycloud.oatos.bigfilein.model.oatos.BaseDTO;
 
 /**
  * 登录结果
- * @author yang
  *
+ * @author yang
  */
 public class LoginResultDTO extends BaseDTO {
 
-	/**
-	 * 登录帐号
-	 */
-	private String account;
-	
-	/**
-	 * 登录token<br>
-	 * 登录成功后有正确的token
-	 */
-	private String token;
+    /**
+     * 登录帐号
+     */
+    private String account;
 
-	/**
-	 * 是否为付费用户
-	 */
-	private boolean vip;
+    /**
+     * 登录token<br>
+     * 登录成功后有正确的token
+     */
+    private String token;
 
-	public LoginResultDTO() {
-	}
+    /**
+     * 是否为付费用户
+     */
+    private boolean vip;
 
-	public String getAccount() {
-		return account;
-	}
+    public LoginResultDTO() {
+    }
 
-	public void setAccount(String account) {
-		this.account = account;
-	}
+    public String getAccount() {
+        return account;
+    }
 
-	public String getToken() {
-		return token;
-	}
+    public void setAccount(String account) {
+        this.account = account;
+    }
 
-	public void setToken(String token) {
-		this.token = token;
-	}
+    public String getToken() {
+        return token;
+    }
 
-	public boolean isVip() {
-		return vip;
-	}
+    public void setToken(String token) {
+        this.token = token;
+    }
 
-	public void setVip(boolean vip) {
-		this.vip = vip;
-	}
+    public boolean isVip() {
+        return vip;
+    }
+
+    public void setVip(boolean vip) {
+        this.vip = vip;
+    }
 
 }

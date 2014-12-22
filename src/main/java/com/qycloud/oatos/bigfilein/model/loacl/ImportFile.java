@@ -1,4 +1,4 @@
-package com.qycloud.oatos.bigfilein.model.loacldb;
+package com.qycloud.oatos.bigfilein.model.loacl;
 
 /**
  * Created by jiuyuehe on 2014/10/30.
@@ -98,7 +98,7 @@ public class ImportFile {
         this.pid = pid;
     }
 
-    public  ImportFile(){
+    public ImportFile() {
 
     }
 
@@ -115,7 +115,7 @@ public class ImportFile {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "filename" + this.name + "md5:" + this.md5;
     }
 }
 

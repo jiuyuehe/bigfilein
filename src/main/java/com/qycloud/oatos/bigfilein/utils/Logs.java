@@ -1,14 +1,13 @@
 package com.qycloud.oatos.bigfilein.utils;
 
 
-
-        import org.apache.log4j.Logger;
-        import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 /**
  * log
- * @author yang
  *
+ * @author yang
  */
 public class Logs {
 

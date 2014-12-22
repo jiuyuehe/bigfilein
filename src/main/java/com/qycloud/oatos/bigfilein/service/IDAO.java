@@ -1,6 +1,6 @@
 package com.qycloud.oatos.bigfilein.service;
 
-import com.qycloud.oatos.bigfilein.model.loacldb.ImportFile;
+import com.qycloud.oatos.bigfilein.model.loacl.ImportFile;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -12,7 +12,7 @@ public interface IDAO {
 
     public int insertFile(ImportFile infile) throws SQLException;
 
-    public ImportFile getFileById(int id,int pid);
+    public ImportFile getFileById(int id, int pid);
 
     public int updateFile(int id);
 

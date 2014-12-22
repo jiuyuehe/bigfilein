@@ -1,4 +1,4 @@
-package com.qycloud.oatos.bigfilein.service;
+package com.qycloud.oatos.bigfilein.model.loacl;
 
 import com.qycloud.oatos.bigfilein.model.oatos.Param;
 
@@ -31,10 +31,9 @@ public class FileBlock extends Param {
         this.blockSize = blockSize;
     }
 
-    public FileBlock(){
+    public FileBlock() {
 
     }
-
 
 
     public String getFileName() {

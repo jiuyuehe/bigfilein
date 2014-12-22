@@ -53,7 +53,7 @@ import java.util.concurrent.RecursiveAction;
  * elements long. At this point the array is sorted using a simple compare
  * and possibly a swap. The tasks then finish by using insert sort to
  * merge the two just sorted arrays.
- *
+ * <p/>
  * The idea of this class is to demonstrate the usage of RecursiveAction not
  * to implement the best possible parallel merge sort. This version creates
  * a small array for each merge (creating a lot of objects), this could
@@ -72,8 +72,8 @@ public class MergeSort {
          * Creates a {@code MergeSortTask} containing the array and the bounds of the array
          *
          * @param array the array to sort
-         * @param low the lower element to start sorting at
-         * @param high the non-inclusive high element to sort to
+         * @param low   the lower element to start sorting at
+         * @param high  the non-inclusive high element to sort to
          */
         protected MergeSortTask(int[] array, int low, int high) {
             this.array = array;
@@ -96,6 +96,7 @@ public class MergeSort {
 
         /**
          * Merges the two sorted arrays this.low, middle - 1 and middle, this.high - 1
+         *
          * @param middle the index in the array where the second sorted list begins
          */
         private void merge(int middle) {
@@ -109,7 +110,7 @@ public class MergeSort {
             int copyMiddle = middle - low;
 
             for (int i = low, p = copyLow, q = copyMiddle; i < high; i++) {
-                if (q >= copyHigh || (p < copyMiddle && copy[p] < copy[q]) ) {
+                if (q >= copyHigh || (p < copyMiddle && copy[p] < copy[q])) {
                     array[i] = copy[p++];
                 } else {
                     array[i] = copy[q++];
@@ -120,6 +121,7 @@ public class MergeSort {
 
     /**
      * Creates a {@code MergeSort} containing a ForkJoinPool with the indicated parallelism level
+     *
      * @param parallelism the parallelism level used
      */
     public MergeSort(int parallelism) {
@@ -128,6 +130,7 @@ public class MergeSort {
 
     /**
      * Sorts all the elements of the given array using the ForkJoin framework
+     *
      * @param array the array to sort
      */
     public void sort(int[] array) {

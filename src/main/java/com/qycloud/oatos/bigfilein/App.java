@@ -20,27 +20,20 @@ public class App {
      */
 
 
-    private String importPath ;
+    private String importPath;
 
 
     //TODO    文件分析；
 
 
-    private void walkFileTree(String url){
+    private void walkFileTree(String url) {
 //        Path path = Paths.get(url);
 //        SimpleFileVisitor sf = new SimpleFileVisitor();
 //        Files.walkFileTree(path,)
     }
 
 
-
-
-
-
-
     //TODO    文件监控；
-
-
 
 
     //TODO  文件导入

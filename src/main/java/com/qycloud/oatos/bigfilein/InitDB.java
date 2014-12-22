@@ -11,11 +11,11 @@ public class InitDB {
     private String dbFilePath;
 
 
-    public void CreateFileImportDB(){
+    public void CreateFileImportDB() {
 
     }
 
-    public static  void  main(String [] args){
+    public static void main(String[] args) {
         SQLiteDB.executeSchema(Constant.create_table);
     }
 

@@ -5,9 +5,9 @@ package com.qycloud.oatos.bigfilein.model.oatos;
  */
 public class CheckResult {
 
-   private String statusCode ;
-   private int content ;
-   private String error ;
+    private String statusCode;
+    private int content;
+    private String error;
 
     public String getStatusCode() {
         return statusCode;

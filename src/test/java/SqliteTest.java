@@ -1,4 +1,4 @@
-import com.qycloud.oatos.bigfilein.model.loacldb.ImportFile;
+import com.qycloud.oatos.bigfilein.model.loacl.ImportFile;
 import com.qycloud.oatos.bigfilein.service.IDAO;
 import com.qycloud.oatos.bigfilein.service.ImportDAO;
 import org.junit.Test;
@@ -10,7 +10,7 @@ public class SqliteTest {
 
 
     @Test
-    public void insertfile(){
+    public void insertfile() {
 
         ImportFile imfile = new ImportFile();
         imfile.setFilePath("1212");
@@ -23,7 +23,7 @@ public class SqliteTest {
         try {
 
             IDAO dao = new ImportDAO();
-           int pk =  dao.insertFile(imfile);
+            int pk = dao.insertFile(imfile);
             System.out.println(pk);
 
         } catch (Exception e) {

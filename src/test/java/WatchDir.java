@@ -39,8 +39,10 @@
 
 
 import java.nio.file.*;
+
 import static java.nio.file.StandardWatchEventKinds.*;
 import static java.nio.file.LinkOption.*;
+
 import java.nio.file.attribute.*;
 import java.io.IOException;
 
@@ -57,7 +59,7 @@ public class WatchDir {
 
     @SuppressWarnings("unchecked")
     static <T> WatchEvent<T> cast(WatchEvent<?> event) {
-        return (WatchEvent<T>)event;
+        return (WatchEvent<T>) event;
     }
 
     /**
@@ -79,8 +81,7 @@ public class WatchDir {
         Files.walkFileTree(start, new SimpleFileVisitor<Path>() {
             @Override
             public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs)
-                throws IOException
-            {
+                    throws IOException {
                 register(dir);
                 return FileVisitResult.CONTINUE;
             }
@@ -110,7 +111,7 @@ public class WatchDir {
      * Process all events for keys queued to the watcher
      */
     void processEvents() {
-        for (;;) {
+        for (; ; ) {
 
             // wait for key to be signalled
             WatchKey key;
@@ -120,7 +121,7 @@ public class WatchDir {
                 return;
             }
 
-            for (WatchEvent<?> event: key.pollEvents()) {
+            for (WatchEvent<?> event : key.pollEvents()) {
                 WatchEvent.Kind kind = event.kind();
 
                 // TBD - provide example of how OVERFLOW event is handled
@@ -131,7 +132,7 @@ public class WatchDir {
                 // Context for directory entry event is the file name of entry
                 WatchEvent<Path> ev = cast(event);
                 Path name = ev.context();
-                Path child = ((Path)key.watchable()).resolve(name);
+                Path child = ((Path) key.watchable()).resolve(name);
 
                 // print out event
                 System.out.format("%s: %s\n", event.kind().name(), child);

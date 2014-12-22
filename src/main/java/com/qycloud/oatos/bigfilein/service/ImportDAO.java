@@ -1,6 +1,6 @@
 package com.qycloud.oatos.bigfilein.service;
 
-import com.qycloud.oatos.bigfilein.model.loacldb.ImportFile;
+import com.qycloud.oatos.bigfilein.model.loacl.ImportFile;
 import com.qycloud.oatos.bigfilein.model.Constant;
 import com.qycloud.oatos.bigfilein.utils.Logs;
 import com.qycloud.oatos.bigfilein.utils.SQLiteDB;
@@ -15,8 +15,9 @@ public class ImportDAO implements IDAO {
 
 
     @Override
-    public int insertFile(ImportFile infile) {
+    public int insertFile(ImportFile infile) throws SQLException {
         Connection conn = SQLiteDB.getConnection();
+        System.out.println("conn" + conn);
         int pk = -1;
         PreparedStatement ps = null;
         try {
@@ -32,13 +33,14 @@ public class ImportDAO implements IDAO {
             ResultSet rest = ps.getGeneratedKeys();
             rest.next();
             pk = rest.getInt(1);
-            Logs.getLogger().info("insert file "+infile.getName()+"pk:"+pk);
+            Logs.getLogger().info("insert file " + infile.getName() + "pk:" + pk);
         } catch (SQLException e) {
             e.printStackTrace();
             Logs.getLogger().error(e.getStackTrace());
             return pk;
         }
-        SQLiteDB.close(conn);
+        //SQLiteDB.close(conn);
+        conn.close();
         return pk;
     }
 
@@ -56,10 +58,10 @@ public class ImportDAO implements IDAO {
             ps.setInt(1, id);
             ps.execute();
             SQLiteDB.close(conn);
-        }catch (SQLException e){
+        } catch (SQLException e) {
             return -1;
         }
-            return 0;
+        return 0;
     }
 
     @Override
@@ -67,18 +69,18 @@ public class ImportDAO implements IDAO {
 
         Connection conn = SQLiteDB.getConnection();
         PreparedStatement ps = null;
-       // List<ImportFile> l
+        // List<ImportFile> l
         try {
             ps = conn.prepareStatement(Constant.getListSql);
-            ps.setString(1,"pid");
-            ps.setInt(2,pid);
+            ps.setString(1, "pid");
+            ps.setInt(2, pid);
             ResultSet rs = ps.executeQuery();
-            while(rs.next()){
-              //  rs.getInt();
+            while (rs.next()) {
+                //  rs.getInt();
             }
 
             SQLiteDB.close(conn);
-        }catch (SQLException e){
+        } catch (SQLException e) {
             return null;
         }
         return null;

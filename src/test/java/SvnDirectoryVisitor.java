@@ -6,7 +6,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 /**
  * Created by jiuyuehe on 2014/12/12.
  */
-public class SvnDirectoryVisitor extends SimpleFileVisitor<Path>{
+public class SvnDirectoryVisitor extends SimpleFileVisitor<Path> {
 
     private static int fileCount = 0;
     private static int fileFiledCount = 0;
@@ -38,16 +38,16 @@ public class SvnDirectoryVisitor extends SimpleFileVisitor<Path>{
         long start = System.currentTimeMillis();
 
         try {
-            Files.walkFileTree(Paths.get("D:\\svn"),new SvnDirectoryVisitor());
+            Files.walkFileTree(Paths.get("D:\\svn"), new SvnDirectoryVisitor());
         } catch (IOException e) {
             e.printStackTrace();
         }
         long end = System.currentTimeMillis();
 
-        System.out.println("文件总数："+fileCount);
-        System.out.println("文件失败总数："+fileFiledCount);
-        System.out.println("文件夹总数："+folderCount);
+        System.out.println("文件总数：" + fileCount);
+        System.out.println("文件失败总数：" + fileFiledCount);
+        System.out.println("文件夹总数：" + folderCount);
 
-        System.out.println("费时："  +(end - start));
+        System.out.println("费时：" + (end - start));
     }
 }

@@ -5,8 +5,8 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 /**
  * 所有DTO的父接口(过滤掉为null的序列化)
- * @author yang
  *
+ * @author yang
  */
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)

@@ -1,4 +1,5 @@
 package com.qycloud.oatos.bigfilein.utils;
+
 import org.apache.commons.lang.time.DateFormatUtils;
 
 import java.io.File;
@@ -18,8 +19,8 @@ public class SQLiteDB {
 
     static {
         try {
-           // String file = SQLiteDB.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-          //  String dir = file.substring(0, file.lastIndexOf("/"));
+            // String file = SQLiteDB.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+            //  String dir = file.substring(0, file.lastIndexOf("/"));
             dburl = "jdbc:sqlite:" + dir + "/oatos_import.db";
             Logs.getLogger().info(dburl);
 
@@ -30,8 +31,8 @@ public class SQLiteDB {
     }
 
 
-    public static Connection getConnection(){
-        if(con == null){
+    public static Connection getConnection() {
+        if (con == null) {
             try {
                 con = DriverManager.getConnection(dburl);
             } catch (SQLException e) {
@@ -42,9 +43,9 @@ public class SQLiteDB {
         return con;
     }
 
-    public  static void close(Connection conn){
+    public static void close(Connection conn) {
         try {
-            if(conn != null && !conn.isClosed()){
+            if (conn != null && !conn.isClosed()) {
                 conn.close();
             }
         } catch (SQLException e) {
@@ -54,17 +55,18 @@ public class SQLiteDB {
 
     /**
      * 新建库，表,插入，更新数据；
+     *
      * @param sql
      * @return
      */
-    public static int executeSchema(String sql ){
+    public static int executeSchema(String sql) {
         Connection connection = getConnection();
         Statement statement;
-        int result =-1;
+        int result = -1;
         try {
             statement = connection.createStatement();
             statement.setQueryTimeout(30);
-            result= statement.executeUpdate(sql);
+            result = statement.executeUpdate(sql);
             close(connection);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -74,12 +76,7 @@ public class SQLiteDB {
     }
 
 
-
-
-
-
-
-    public static void main(String [] args){
+    public static void main(String[] args) {
 //        String sql ="create table test2 (id integer primary key AUTOINCREMENT, name varchar)";
 //        int re = SQLiteDB.executeSchema(sql);
 //        System.out.println(re);

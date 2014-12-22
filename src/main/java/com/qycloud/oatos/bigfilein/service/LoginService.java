@@ -11,33 +11,36 @@ import java.util.UUID;
  */
 public class LoginService {
 
+    /**
+     * @param cfp
+     * @return
+     * @throws Exception
+     */
+    public static FilesDTO createFolder(CreateFolderParam cfp) throws Exception {
 
-    public static final String LOGIN = "/os/java/pub/user/signin";
-    public static final String GET_USER_INFO = "/os/java/sc/user/getUserInfo";
-    public static final String GET_FILES = "/os/java/sc/file/getFiles";
+        String json = Json.toJson(cfp);
 
-    public static final String ERROR_MARK ="error";
+        String r = XhrProxy.post(Constant.getUrl(Constant.CREATE_FOLDER), Constant.UT, json);
 
+        FilesDTO files = Json.parse(r, FilesDTO.class);
 
-    private static String getUrl(String uriName){
-
-        return "http://"+ Constant.IP+uriName;
+        return files;
     }
 
     /**
      * 自行登入；
+     *
      * @return
      */
-    public static boolean login(){
-        return login(Constant.userName,Constant.pwd);
+    public static boolean login() {
+        return login(Constant.userName, Constant.pwd);
     }
-
 
 
     //TODO login
     public static boolean login(String username, String password) {
 
-        String loginUrl = getUrl(LOGIN);
+        String loginUrl = Constant.getUrl(Constant.LOGIN);
         Logs.getLogger().info("start ... loginUrl : " + loginUrl);
         try {
             LogonParam param = new LogonParam();
@@ -47,7 +50,7 @@ public class LoginService {
             param.setPassword(e.getPassword());
             param.setClientId(UUID.randomUUID().toString());
             String json = Json.toJson(param);
-            String r = XhrProxy.post(loginUrl,null,json);
+            String r = XhrProxy.post(loginUrl, null, json);
             if (isResponseError(r)) {
                 Logs.getLogger().error("login ...  error : " + r);
                 return false;
@@ -63,28 +66,28 @@ public class LoginService {
     }
 
     public static boolean isResponseError(String result) {
-        return result != null && result.startsWith(ERROR_MARK);
+        return result != null && result.startsWith(Constant.ERROR_MARK);
     }
 
     // TODO getUserInfo
-    public static UserDTO getUserInfo(){
-        String getInfoUrl = getUrl(GET_USER_INFO);
+    public static UserDTO getUserInfo() {
+        String getInfoUrl = Constant.getUrl(Constant.GET_USER_INFO);
         try {
-            String r = XhrProxy.post(getInfoUrl,Constant.UT,"");
-            Logs.getLogger().info("userInfo ... load success ... : "+ r);
-            UserDTO user =  Json.parse(r, UserDTO.class);
+            String r = XhrProxy.post(getInfoUrl, Constant.UT, "");
+            Logs.getLogger().info("userInfo ... load success ... : " + r);
+            UserDTO user = Json.parse(r, UserDTO.class);
             return user;
         } catch (Exception e) {
             e.printStackTrace();
-            Logs.getLogger().error("getUserInfo ... load fail ... "+ e.getMessage());
+            Logs.getLogger().error("getUserInfo ... load fail ... " + e.getMessage());
         }
         return null;
     }
 
     // TODO getFiles
 
-    public static FilesDTO getFiles(){
-        String getFilesUrl = getUrl(GET_FILES);
+    public static FilesDTO getFiles() {
+        String getFilesUrl = Constant.getUrl(Constant.GET_FILES);
         GetFileListDTO fileListDTO = new GetFileListDTO();
         fileListDTO.setFileType(Constant.ENT_FILE);
         fileListDTO.setFolderId(null);
@@ -92,20 +95,20 @@ public class LoginService {
         fileListDTO.setSkipResults(0);
         String str = null;
         try {
-          str =  Json.toJson(fileListDTO);
-          Logs.getLogger().info("getFiles ... load .. "+str);
+            str = Json.toJson(fileListDTO);
+            Logs.getLogger().info("getFiles ... load .. " + str);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
         try {
-            String r = XhrProxy.post(getFilesUrl,Constant.UT,str);
-            Logs.getLogger().info("getFiles ... load success ... : "+ r);
-            FilesDTO files =  Json.parse(r, FilesDTO.class);
+            String r = XhrProxy.post(getFilesUrl, Constant.UT, str);
+            Logs.getLogger().info("getFiles ... load success ... : " + r);
+            FilesDTO files = Json.parse(r, FilesDTO.class);
             return files;
         } catch (Exception e) {
             e.printStackTrace();
-            Logs.getLogger().error("getFiles ... load fail ... "+ e.getMessage());
+            Logs.getLogger().error("getFiles ... load fail ... " + e.getMessage());
         }
         return null;
     }

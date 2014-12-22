@@ -15,11 +15,12 @@ public class ServiceTest {
 
 
     @Test
-    public void testLogin() throws  Exception{
-        LoginService.login("18123936031","111111");
+    public void testLogin() throws Exception {
+        LoginService.login("18123936031", "111111");
         LoginService.getUserInfo();
         LoginService.getFiles();
     }
+
     @Test
     public void testFileBlock() throws Exception {
         File file = new File("C:\\Users\\jiuyuehe\\Desktop\\燕麦私有云介绍1.0.pptx");
@@ -33,46 +34,46 @@ public class ServiceTest {
 //            System.out.println("q"+QuickMD5.getMD5String(buf));
 //            System.out.println("f"+FileUtil.getMD5(buf));
 //        }
-      // UploadFileService.sectionFileUpload(file);
+        // UploadFileService.sectionFileUpload(file);
     }
 
     @Test
-    public void tesetMd5() throws Exception{
-            File file = new File("‪E:/tools/VMware-workstation-full-9.0.2-1031769.exe");
-            System.out.println(  FileUtil.getFileMD5(file));
-            System.out.println(  QuickMD5.getFileMD5Channel(file));
-            System.out.println(  QuickMD5.getFileMD5Buffer(file));
+    public void tesetMd5() throws Exception {
+        File file = new File("‪E:/tools/VMware-workstation-full-9.0.2-1031769.exe");
+        System.out.println(FileUtil.getFileMD5(file));
+        System.out.println(QuickMD5.getFileMD5Channel(file));
+        System.out.println(QuickMD5.getFileMD5Buffer(file));
     }
 
     @Test
-    public void testBlockUpload() throws Exception{
+    public void testBlockUpload() throws Exception {
         //File file = new File("C:\\Users\\jiuyuehe\\Desktop\\libgd.so.2.0.0");
 //        File file = new File("C:\\Users\\jiuyuehe\\Desktop\\php.tar");
 //        File file = new File("D:\\sucai\\bazar-wp-v2.2.2.zip");
         File file = new File("E:\\tools\\Photoshop_13_LS3.7z");
 
 
-        UploadFileService.checkFile(QuickMD5.getFileMD5Channel(file),file.getName(),file.length());
-     //   UploadFileService.checkFile();
+        UploadFileService.checkFile(QuickMD5.getFileMD5Channel(file), file.getName(), file.length());
+        //   UploadFileService.checkFile();
     }
 
     @Test
-    public void testSectionCheck() throws Exception{
+    public void testSectionCheck() throws Exception {
 //      File file = new File("C:\\Users\\jiuyuehe\\Desktop\\燕麦私有云介绍1.0.pptx");
-       // File file = new File("C:\\Users\\jiuyuehe\\Desktop\\2014-11-29_115359.png");
+        // File file = new File("C:\\Users\\jiuyuehe\\Desktop\\2014-11-29_115359.png");
 
         File file = new File("E:\\pac\\zip");
 //       UploadFileService.checkFile(QuickMD5.getFileMD5Channel(file),file.getName(),file.length());
-       // UploadFileService.defaultBlockSizeUpload(file);
+        // UploadFileService.defaultBlockSizeUpload(file);
 
 //        UploadFileService.sectionFileUpload(file,1,1024,null);
 
         File[] files = file.listFiles();
 
-        List<Thread> list = new ArrayList<Thread>() ;
+        List<Thread> list = new ArrayList<Thread>();
 
         for (final File file1 : files) {
-            Thread t1 =   new Thread(file1.getName()){
+            Thread t1 = new Thread(file1.getName()) {
                 @Override
                 public void run() {
                     try {

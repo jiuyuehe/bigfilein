@@ -5,37 +5,37 @@ import com.qycloud.oatos.bigfilein.model.oatos.BaseParam;
 
 /**
  * 加密参数
- * @author yang
  *
+ * @author yang
  */
 public class NonceParam extends BaseParam {
 
-	/**
-	 * 随机串
-	 */
-	private String nonce;
+    /**
+     * 随机串
+     */
+    private String nonce;
 
-	/**
-	 * 用户验证码
-	 */
-	private String hashKey;
+    /**
+     * 用户验证码
+     */
+    private String hashKey;
 
 
-	public String getNonce() {
-		return nonce;
-	}
+    public String getNonce() {
+        return nonce;
+    }
 
-	public void setNonce(String nonce) {
-		this.nonce = nonce;
-	}
+    public void setNonce(String nonce) {
+        this.nonce = nonce;
+    }
 
-	public String getHashKey() {
-		return hashKey;
-	}
+    public String getHashKey() {
+        return hashKey;
+    }
 
-	public void setHashKey(String hashKey) {
-		this.hashKey = hashKey;
-	}
+    public void setHashKey(String hashKey) {
+        this.hashKey = hashKey;
+    }
 
 
 }

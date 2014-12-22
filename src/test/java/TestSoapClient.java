@@ -16,8 +16,6 @@ import java.io.IOException;
  */
 public class TestSoapClient {
 
-
-
     /**
      * 天晴短息发送测试
      *
@@ -29,7 +27,8 @@ public class TestSoapClient {
 
         CloseableHttpClient httpPost = HttpClients.createDefault();
         HttpPost postm = new HttpPost(url);
-        postm.addHeader("Content-Type", "text/xml; charset=utf-8");
+        postm.addHeader("SOAPAction", "\"http://tempuri.org/sendSmsMob\"");
+        postm.addHeader("Content-Type", "text/xml;charset=utf-8");
         StringBuilder sb = new StringBuilder();
         sb.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
         sb.append("<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">");
@@ -38,61 +37,44 @@ public class TestSoapClient {
         sb.append("<strReceivers>" + receiver + "</strReceivers>");
         sb.append("<smsContent>" + content + "</smsContent>");
         sb.append("</sendSmsMob>");
-        sb.append("</soapenv:Body>");
-        sb.append("</soapenv:Envelope>");
+        sb.append("</soap:Body>");
+        sb.append("</soap:Envelope>");
         HttpEntity httpEntity = new StringEntity(sb.toString(), "UTF-8");
+
         postm.setEntity(httpEntity);
+
+        System.out.println("http headers :" + postm.getAllHeaders());
+
         try {
+            System.out.println("http body :" + EntityUtils.toString(postm.getEntity()));
             CloseableHttpResponse response = httpPost.execute(postm);
 
-            StatusLine sl  = response.getStatusLine();
-            int statusCode =  sl.getStatusCode();
+            StatusLine sl = response.getStatusLine();
+            int statusCode = sl.getStatusCode();
+            System.out.println(statusCode);
 
-            String resStr =  EntityUtils.toString(response.getEntity());
+            String resStr = EntityUtils.toString(response.getEntity());
 
-            if(statusCode ==200 && resStr.contains("error='0'"))
-                return  true;
+            System.out.println("re:" + resStr);
+
+            if (statusCode == 200 && resStr.contains("error='0'"))
+                return true;
 
         } catch (IOException e) {
+            System.out.println(e.getMessage());
             e.printStackTrace();
             return false;
         }
 
         return true;
-
     }
 
-
-    public static void post(String url) {
-        CloseableHttpClient httpPost = HttpClients.createDefault();
-        HttpPost postm = new HttpPost(url);
-        postm.addHeader("Content-Type", "text/xml; charset=utf-8");
-        StringBuilder sb = new StringBuilder();
-        sb.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
-        sb.append("<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:con=\"http://control.liutu.doodoole.com/\">");
-        sb.append("<soapenv:Header/>");
-        sb.append("<soapenv:Body>");
-        sb.append("<con:sayhello>");
-        sb.append("<arg0>?asdf12312</arg0>");
-        sb.append("</con:sayhello>");
-        sb.append("</soapenv:Body>");
-        sb.append("</soapenv:Envelope>");
-        HttpEntity httpEntity = new StringEntity(sb.toString(), "UTF-8");
-        postm.setEntity(httpEntity);
-        try {
-            CloseableHttpResponse response = httpPost.execute(postm);
-            System.out.println(response.getStatusLine());
-            System.out.printf("entity" + EntityUtils.toString(response.getEntity()));
-            HttpEntity entity = response.getEntity();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     public static void main(String[] args) {
-       // TestSoapClient.post("http://127.0.0.1:9999/TestServer/sayHello?wsdl");
+        // TestSoapClient.post("http://127.0.0.1:9999/TestServer/sayHello?wsdl");
+        TestSoapClient.postCttqMsg("http://172.16.0.2:8234/SendSmsWebService.asmx", "18123936031", "zhongwen测试");
 
-        System.out.println(" <sendSmsMobResult><result error='0'><Sms   SendDate=\"20141124\" SendTime=\"104405\" MESSAGE =\"成功\"/></result></sendSmsMobResult>".contains("error='0'"));
+//        System.out.println(" <sendSmsMobResult><result error='0'><Sms   SendDate=\"20141124\" SendTime=\"104405\" MESSAGE =\"成功\"/></result></sendSmsMobResult>".contains("error='0'"));
 
     }
 

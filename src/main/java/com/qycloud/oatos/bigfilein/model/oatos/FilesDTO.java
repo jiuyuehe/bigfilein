@@ -8,38 +8,38 @@ import java.util.List;
 
 /**
  * 文件list
- * @author yang
  *
+ * @author yang
  */
 public class FilesDTO extends BaseDTO {
 
-	/**
-	 * 文件list
-	 */
-	private List<FileNewDTO> files;
-	
-	/**
-	 * 结果总条数
-	 */
-	private Integer resultCount;
+    /**
+     * 文件list
+     */
+    private List<FileNewDTO> files;
 
-	public FilesDTO() {
-	}
+    /**
+     * 结果总条数
+     */
+    private Integer resultCount;
 
-	public List<FileNewDTO> getFiles() {
-		return files;
-	}
+    public FilesDTO() {
+    }
 
-	public void setFiles(List<FileNewDTO> files) {
-		this.files = files;
-	}
+    public List<FileNewDTO> getFiles() {
+        return files;
+    }
 
-	public Integer getResultCount() {
-		return resultCount;
-	}
+    public void setFiles(List<FileNewDTO> files) {
+        this.files = files;
+    }
 
-	public void setResultCount(Integer resultCount) {
-		this.resultCount = resultCount;
-	}
+    public Integer getResultCount() {
+        return resultCount;
+    }
+
+    public void setResultCount(Integer resultCount) {
+        this.resultCount = resultCount;
+    }
 
 }

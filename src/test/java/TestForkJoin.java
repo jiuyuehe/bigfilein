@@ -6,13 +6,13 @@ import java.util.concurrent.RecursiveTask;
 /**
  * Created by jiuyuehe on 2014/11/14.
  */
-public class TestForkJoin extends RecursiveTask<Integer>{
+public class TestForkJoin extends RecursiveTask<Integer> {
 
-    public static final  int taskNum = 5;
+    public static final int taskNum = 5;
 
     private int start;
 
-    private  int end;
+    private int end;
 
 
     public TestForkJoin(int start, int end) {
@@ -26,14 +26,14 @@ public class TestForkJoin extends RecursiveTask<Integer>{
 
         boolean canCompute = (end - start) <= taskNum;
 
-        if(canCompute){
-            for (int i = start; i<=end ;i++){
-                sum +=i;
+        if (canCompute) {
+            for (int i = start; i <= end; i++) {
+                sum += i;
             }
-        }else{
-            int middle = (start+end)/2;
-            TestForkJoin leftTask = new TestForkJoin(start,middle);
-            TestForkJoin rightTask = new TestForkJoin(middle+1,end);
+        } else {
+            int middle = (start + end) / 2;
+            TestForkJoin leftTask = new TestForkJoin(start, middle);
+            TestForkJoin rightTask = new TestForkJoin(middle + 1, end);
 
             leftTask.fork();
             rightTask.fork();
@@ -43,7 +43,7 @@ public class TestForkJoin extends RecursiveTask<Integer>{
             int rightResult = rightTask.join();
 
             //合并子任务
-            sum = leftResult  + rightResult;
+            sum = leftResult + rightResult;
 
         }
 
@@ -51,13 +51,13 @@ public class TestForkJoin extends RecursiveTask<Integer>{
     }
 
     public static void main(String[] args) {
-        ForkJoinPool forkJoinPool =new ForkJoinPool();
+        ForkJoinPool forkJoinPool = new ForkJoinPool();
 
-        TestForkJoin task =  new TestForkJoin(1,100000);
+        TestForkJoin task = new TestForkJoin(1, 100000);
 
         Future<Integer> re = forkJoinPool.submit(task);
 
-      //  System.out.println(500_00);
+        //  System.out.println(500_00);
 
         try {
             System.out.println(re.get());

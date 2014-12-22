@@ -34,6 +34,7 @@ public class XhrProxy {
 
     /**
      * get
+     *
      * @param url
      * @param token
      * @param params
@@ -135,7 +136,6 @@ public class XhrProxy {
     }
 
 
-
     /**
      * post
      *
@@ -148,8 +148,8 @@ public class XhrProxy {
     public static String post(String url, HttpEntity postEntity,
                               Map<String, String> headers) throws Exception {
 
-       PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager();
-       CloseableHttpClient httpclient = HttpClients.custom().setConnectionManager(cm).build();
+        PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager();
+        CloseableHttpClient httpclient = HttpClients.custom().setConnectionManager(cm).build();
         try {
             HttpPost post = new HttpPost(url);
             post.setHeader("Accept", "text/plain;charset=UTF-8");
@@ -173,16 +173,12 @@ public class XhrProxy {
 //				}
                 return EntityUtils.toString(response.getEntity(), "UTF-8");
             } finally {
-               response.close();
+                response.close();
             }
         } finally {
-           httpclient.close();
+            httpclient.close();
         }
     }
-
-
-
-
 
 
 }

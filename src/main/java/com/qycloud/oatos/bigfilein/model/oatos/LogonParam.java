@@ -1,120 +1,118 @@
 package com.qycloud.oatos.bigfilein.model.oatos;
 
 
-
 /**
  * 用户登录参数
- * @author yang
  *
+ * @author yang
  */
 public class LogonParam extends NonceParam {
 
-	/**
-	 * 企业帐号
-	 */
-	private String entName;
+    /**
+     * 企业帐号
+     */
+    private String entName;
 
-	/**
-	 * 用户帐号
-	 */
-	private String userName;
-	
-	/**
-	 * 登陆密码（加密）
-	 */
-	private String password;
+    /**
+     * 用户帐号
+     */
+    private String userName;
 
-	/**
-	 * 客户端标识
-	 */
-	private String clientId;
+    /**
+     * 登陆密码（加密）
+     */
+    private String password;
 
-	/**
-	 * 用户登录终端ip地址
-	 */
-	private String ip;
+    /**
+     * 客户端标识
+     */
+    private String clientId;
 
-	/**
-	 * IOS设备使用的设备标识
-	 */
-	private String deviceToken;
+    /**
+     * 用户登录终端ip地址
+     */
+    private String ip;
 
-	/**
-	 * 登录方式<br>
-	 *
-	 */
-	private LogonMode mode;
+    /**
+     * IOS设备使用的设备标识
+     */
+    private String deviceToken;
 
-	/**
-	 * 设备型号
-	 */
-	private String deviceModel;
-	
-	public LogonParam() {
-	}
+    /**
+     * 登录方式<br>
+     */
+    private LogonMode mode;
 
-	public String getEntName() {
-		return entName;
-	}
+    /**
+     * 设备型号
+     */
+    private String deviceModel;
 
-	public void setEntName(String entName) {
-		this.entName = entName;
-	}
+    public LogonParam() {
+    }
 
-	public String getUserName() {
-		return userName;
-	}
+    public String getEntName() {
+        return entName;
+    }
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    public void setEntName(String entName) {
+        this.entName = entName;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-	public String getClientId() {
-		return clientId;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public void setClientId(String clientId) {
-		this.clientId = clientId;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public String getIp() {
-		return ip;
-	}
+    public String getClientId() {
+        return clientId;
+    }
 
-	public void setIp(String ip) {
-		this.ip = ip;
-	}
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
+    }
 
-	public String getDeviceToken() {
-		return deviceToken;
-	}
+    public String getIp() {
+        return ip;
+    }
 
-	public void setDeviceToken(String deviceToken) {
-		this.deviceToken = deviceToken;
-	}
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
 
-	public LogonMode getMode() {
-		return mode;
-	}
+    public String getDeviceToken() {
+        return deviceToken;
+    }
 
-	public void setMode(LogonMode mode) {
-		this.mode = mode;
-	}
+    public void setDeviceToken(String deviceToken) {
+        this.deviceToken = deviceToken;
+    }
 
-	public String getDeviceModel() {
-		return deviceModel;
-	}
+    public LogonMode getMode() {
+        return mode;
+    }
 
-	public void setDeviceModel(String deviceModel) {
-		this.deviceModel = deviceModel;
-	}
+    public void setMode(LogonMode mode) {
+        this.mode = mode;
+    }
+
+    public String getDeviceModel() {
+        return deviceModel;
+    }
+
+    public void setDeviceModel(String deviceModel) {
+        this.deviceModel = deviceModel;
+    }
 
 }
